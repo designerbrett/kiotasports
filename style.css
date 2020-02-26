@@ -1,9 +1,13 @@
 body {
-	margin-top: 60px;
+	margin-top: 85px;
 }
 header {
 	position: fixed;
 	text-align: center;
 	width: 100%;
 	background: #FFF;
+	top: 0;
+	left: 0;
+	border-bottom: 2px solid #F0F0F0;
+	padding: 10px 0;
 }
