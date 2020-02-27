@@ -13,7 +13,7 @@ body {
 }
 @media (max-width: 550px) {
 	body {
-		margin-top: 45px;
+		margin-top: 55px;
 	}
 }
 .container {
@@ -45,7 +45,7 @@ header {
 		padding: 4px 0;
 	}
 	header img {
-		height: 30px;
+		height: 40px;
 	}
 }
 
@@ -60,6 +60,7 @@ header {
 @media (max-width: 630px) {
 	.hero-image {
 		width: 100%;
+		height: 300px;
 	}
 }
 .hero-content {
@@ -72,13 +73,15 @@ header {
 }
 @media (max-width: 630px) {
 	.hero-content {
-		width: 100%;
-		padding: 20px;
+		width: 92%;
+		padding: 4%;
+		margin: 0;
 	}
 }
 .hero-content h1 {
 	margin: 0;
 }
+
 .bio-contact {
 	margin: 50px 0;
 }
@@ -102,6 +105,13 @@ header {
 .bio h3 {
 	margin: 0;
 }
+@media (max-width: 860px) {
+	.bio {
+		width: 100%;
+		margin: 0;
+	}
+}
+
 .more-info {
 	display: inline-block;
 	vertical-align: top;
@@ -117,6 +127,11 @@ header {
 .more-info a {
 	color: #FFF;
 }
+@media (max-width: 860px) {
+	.more-info {
+		width: 96%;
+	}
+}
 
 h1,
 h2,
@@ -129,13 +144,31 @@ h1 {
 	font-size: 60px;
 	line-height: 60px;
 }
+@media (max-width: 550px) {
+	h1 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+}
 h2 {
 	font-size: 40px;
 	line-height: 1.2rem;
 }
+@media (max-width: 550px) {
+	h2 {
+		font-size: 30px;
+		line-height: 28px;
+	}
+}
 h3 {
 	font-size: 30px;
 	line-height: 28px;
+}
+@media (max-width: 550px) {
+	h3 {
+		font-size: 24px;
+		line-height: 28px;
+	}
 }
 
 button,
@@ -187,16 +220,11 @@ button:hover,
   margin: 0 8px;
 }
 .carousel .slick-list {
-  max-width: 1100px;
   margin: 0 auto;
-  overflow: visible;
 }
 @media (max-width: 550px) {
 	.carousel .slick-slide {
 	  margin: 0 8px;
-	}
-	.carousel .slick-list {
-	  margin: 0 -8px;
 	}
 }
 
