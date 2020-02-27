@@ -129,12 +129,16 @@ h1 {
 	font-size: 60px;
 	line-height: 60px;
 }
-
+h2 {
+	font-size: 40px;
+	line-height: 1.2rem;
+}
 h3 {
 	font-size: 30px;
 	line-height: 28px;
 }
 
+button,
 .button {
 	text-decoration: none;
 	font-family: 'Teko', 'Helvetica', 'Arial', sans-serif;
@@ -145,6 +149,7 @@ h3 {
 	padding: 12px 24px 9px;
 	display: inline-block;
 }
+button:hover,
 .button:hover {
 	background: #DB751D;
 }
@@ -195,6 +200,23 @@ h3 {
 	}
 }
 
+.contact .container {
+	max-width: 600px;
+}
+.contact {
+	margin: 50px 0;
+}
+form input {
+	display: block;
+	width: 96%;
+  padding: 8px;
+}
+form textarea {
+	display: block;
+	width: 96%;
+  padding: 8px;
+  border: 1px solid #CCC;
+}
 
 footer {
 	border-top: 2px solid #F0F0F0;
