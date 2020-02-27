@@ -76,6 +76,9 @@ header {
 		width: 92%;
 		padding: 4%;
 		margin: 0;
+		text-align: center;
+		border-bottom: 1px solid #CCC;
+		padding-bottom: 50px;
 	}
 }
 .hero-content h1 {
@@ -109,6 +112,17 @@ header {
 	.bio {
 		width: 100%;
 		margin: 0;
+	}
+}
+@media (max-width: 550px) {
+	.bio {
+		text-align: center;
+	}
+	.bio img {
+		margin: 0;
+	}
+	.bio .content {
+		width: 100%;
 	}
 }
 
@@ -181,6 +195,7 @@ button,
 	line-height: 26px;
 	padding: 12px 24px 9px;
 	display: inline-block;
+	border: none;
 }
 button:hover,
 .button:hover {
@@ -238,6 +253,7 @@ form input {
 	display: block;
 	width: 96%;
   padding: 8px;
+  border: 1px solid #CCC;
 }
 form textarea {
 	display: block;
