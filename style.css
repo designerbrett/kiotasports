@@ -6,6 +6,16 @@ body {
 	line-height: 24px;
 	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
+@media (max-width: 860px) {
+	body {
+		margin-top: 68px;
+	}
+}
+@media (max-width: 550px) {
+	body {
+		margin-top: 45px;
+	}
+}
 .container {
 	max-width: 1060px;
 	padding: 0 20px;
@@ -23,6 +33,19 @@ header {
 	padding: 10px 0;
 	z-index: 1;
 }
+@media (max-width: 860px) {
+	header img {
+		height: 40px;
+	}
+}
+@media (max-width: 550px) {
+	header {
+		padding: 4px 0;
+	}
+	header img {
+		height: 30px;
+	}
+}
 
 .hero-image {
 	width: 60%;
@@ -32,6 +55,11 @@ header {
   background: #333 url(images/hero.png) no-repeat center center;
   background-size: cover;
 }
+@media (max-width: 630px) {
+	.hero-image {
+		width: 100%;
+	}
+}
 .hero-content {
   width: 35%;
   display: inline-block;
@@ -39,6 +67,12 @@ header {
   margin-left: 3%;
   font-size: 20px;
   line-height: 28px;
+}
+@media (max-width: 630px) {
+	.hero-content {
+		width: 100%;
+		padding: 20px;
+	}
 }
 .hero-content h1 {
 	margin: 0;
