@@ -49,6 +49,19 @@ header {
 	}
 }
 
+header .container {
+	position: relative;
+}
+header a.about {
+	position: absolute;
+  right: 0;
+  top: 20px;
+  text-decoration: none;
+  font-family: 'Teko', 'Helvetica', 'Arial', sans-serif;
+  color: #047954;
+  font-size: 24px;
+}
+
 .hero-image {
 	width: 60%;
   height: 500px;
@@ -91,7 +104,7 @@ header {
 .bio {
 	display: inline-block;
 	vertical-align: top;
-	width: 58%;
+	width: 20%;
 	margin-right: 1%;
 }
 .bio img {
@@ -99,11 +112,6 @@ header {
 	margin-right: 2%;
 	display: inline-block;
 	vertical-align: top;
-}
-.bio .content {
-	display: inline-block;
-	vertical-align: top;
-	width: 64%;
 }
 .bio h3 {
 	margin: 0;
@@ -129,14 +137,13 @@ header {
 .more-info {
 	display: inline-block;
 	vertical-align: top;
-	width: 36%;
 	background: #0064A8;
 	border-radius: 4px;
 	color: #FFF;
 	font-size: 20px;
 	line-height: 26px;
 	text-align: center;
-	padding: 46px 2%;
+	padding: 46px 4%;
 }
 .more-info a {
 	color: #FFF;
@@ -182,6 +189,18 @@ h3 {
 	h3 {
 		font-size: 24px;
 		line-height: 28px;
+	}
+}
+
+h4 {
+	font-size: 24px;
+	line-height: 26px;
+	margin-bottom: 0;
+}
+@media (max-width: 550px) {
+	h4 {
+		font-size: 20px;
+		line-height: 24px;
 	}
 }
 
@@ -231,6 +250,9 @@ button:hover,
 
 /* Carousel
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.carousel-section {
+	margin-top: 40px;
+}
 .carousel .slick-slide {
   margin: 0 8px;
 }
@@ -243,11 +265,11 @@ button:hover,
 	}
 }
 
-.contact .container {
-	max-width: 600px;
-}
 .contact {
-	margin: 50px 0;
+	display: inline-block;
+	vertical-align: top;
+	width: 75%;
+	margin-left: 3%;
 }
 form input {
 	display: block;
