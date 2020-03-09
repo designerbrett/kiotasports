@@ -54,12 +54,17 @@ header .container {
 }
 header a.about {
 	position: absolute;
-  right: 0;
+  right: 24px;
   top: 20px;
   text-decoration: none;
   font-family: 'Teko', 'Helvetica', 'Arial', sans-serif;
   color: #047954;
   font-size: 24px;
+}
+@media (max-width: 860px) {
+	header a.about {
+		top: 12px;
+	}
 }
 
 .hero-image {
