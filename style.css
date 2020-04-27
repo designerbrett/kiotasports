@@ -29,7 +29,7 @@ body.inner-page {
 }
 header {
 	position: fixed;
-	text-align: center;
+	text-align: left;
 	width: 100%;
 	background: #FFF;
 	top: 0;
@@ -55,18 +55,20 @@ header {
 header .container {
 	position: relative;
 }
-header a.about {
-	position: absolute;
-  right: 24px;
-  top: 20px;
+header .menu-links {
+	float: right;
+	margin-top: 2%;
+}
+header a {
   text-decoration: none;
   font-family: 'Teko', 'Helvetica', 'Arial', sans-serif;
   color: #047954;
   font-size: 24px;
+  margin-left: 24px;
 }
-@media (max-width: 860px) {
-	header a.about {
-		top: 12px;
+@media (max-width: 550px) {
+	header .menu-links {
+		margin-top: 3%;
 	}
 }
 
