@@ -83,6 +83,9 @@ header .phone a {
 	text-decoration: underline;
 	display: inline-block;
 }
+header .phone a img {
+	margin-right: 4px;
+}
 
 .hero-image {
 	width: 60%;
