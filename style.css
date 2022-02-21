@@ -75,13 +75,14 @@ header .phone {
 	background: #f1f1f1;
 	font-size: 16px;
 	text-align: center;
-	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 header .phone a {
 	padding: 4px 8px;
 	color: #666;
 	text-decoration: underline;
 	display: inline-block;
+	vertical-align: middle;
+	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 header .phone a img {
 	margin-right: 4px;
