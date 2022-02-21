@@ -86,6 +86,7 @@ header .phone a {
 }
 header .phone a img {
 	margin-right: 4px;
+	height: auto;
 }
 
 .hero-image {
