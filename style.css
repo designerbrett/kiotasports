@@ -71,6 +71,16 @@ header a {
 		margin-top: 3%;
 	}
 }
+header .phone {
+	background: #f1f1f1;
+	font-size: 16px;
+	text-align: center;
+}
+header .phone a {
+	padding: 4px 8px;
+	color: #666;
+	text-decoration: underline;
+}
 
 .hero-image {
 	width: 60%;
