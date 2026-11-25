@@ -1,0 +1,76 @@
+---
+import Base from '../layouts/Base.astro';
+import HubContent from '../components/HubContent.astro';
+
+const carousel = [
+	'carousel-11.png', 'carousel-12.png', 'carousel-01.jpg', 'carousel-02.jpg', 'carousel-03.jpg',
+	'carousel-04.png', 'carousel-05.png', 'carousel-06.png', 'carousel-07.jpg', 'carousel-08.png',
+	'carousel-09.png', 'carousel-10.png', 'carousel-11.png', 'carousel-12.png',
+];
+---
+<Base title="Home" bodyClass="home">
+	<section class="hero">
+		<div class="hero-image"></div>
+		<div class="hero-content">
+			<h1>Welcome to Kiota Sports Academy</h1>
+			<p>Nurturing talent and character. Providing professional and structured talent development in Africa.</p>
+			<h4>Activities</h4>
+			<p>Soccer, Swimming, Badminton, and Basketball</p>
+			<a class="button" target="_blank" href="https://forms.gle/bKkH27nKgSyK9Ujs6" data-pl-track="booking">Fill out registration form</a>
+		</div>
+	</section>
+
+	<section class="carousel-section">
+		<div class="row">
+			<div class="carousel">
+				{carousel.map((src) => <div><img src={`/images/${src}`}></div>)}
+			</div>
+		</div>
+	</section>
+
+	<HubContent />
+
+	<div class="container">
+	<section class="bio-contact">
+		<div class="bio">
+			<p class="more-info">If you have any questions please reach out to us:<br> <a href="mailto:kiotasportsacademy@gmail.com">Email us</a></p>
+		</div>
+
+		<section class="contact" id="contact">
+			<h2>Contact us to learn more or join</h2>
+			<form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
+				<p class="hidden">
+					<label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+				</p>
+				<p>
+					<label>Your Name: <input type="text" name="name" /></label>
+				</p>
+				<p>
+					<label>Your Email: <input type="email" name="email" /></label>
+				</p>
+				<p>
+					<label>Message: <textarea name="message"></textarea></label>
+				</p>
+				<p>
+					<button type="submit">Send</button>
+				</p>
+			</form>
+		</section>
+	</section>
+	</div>
+
+	<script is:inline slot="scripts" type="text/javascript">
+		$(document).on('ready', function() {
+			$(".carousel").slick({
+				dots: false,
+				infinite: true,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				responsive: [
+					{ breakpoint: 800, settings: { slidesToShow: 3 } },
+					{ breakpoint: 550, settings: { slidesToShow: 2 } }
+				]
+			});
+		});
+	</script>
+</Base>

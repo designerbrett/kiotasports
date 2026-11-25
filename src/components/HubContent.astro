@@ -1,0 +1,55 @@
+---
+// Renders whatever the practice has filled in on the Hub; renders nothing until then.
+import { getHubContent } from '../lib/hub';
+
+const hub = await getHubContent();
+const hasHours = hub?.hours.some((d) => d.ranges.length > 0) ?? false;
+const closures = hub?.closures ?? [];
+const items = hub?.items ?? [];
+const show = hasHours || closures.length > 0 || items.length > 0;
+
+const fmtDate = (iso: string) =>
+	new Date(`${iso}T00:00:00`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+---
+{show && (
+	<div class="container">
+	<section class="hub-content">
+		{items.length > 0 && (
+			<div class="specials">
+				<h2>Programs &amp; Specials</h2>
+				{items.map((i) => (
+					<div class="special">
+						<h3>{i.title}{i.price && <span class="price"> · {i.price}</span>}</h3>
+						{i.body && <p>{i.body}</p>}
+						{i.expiresOn && <p class="expires">Through {fmtDate(i.expiresOn)}</p>}
+					</div>
+				))}
+			</div>
+		)}
+		{hasHours && (
+			<div class="hours">
+				<h2>Training Hours</h2>
+				<ul>
+					{hub!.hours.map((d) => (
+						<li><strong>{d.day}</strong> {d.ranges.length ? d.ranges.map((r) => `${r.opens}–${r.closes}`).join(', ') : 'Closed'}</li>
+					))}
+				</ul>
+			</div>
+		)}
+		{closures.length > 0 && (
+			<div class="closures">
+				<h2>Upcoming Closures</h2>
+				<ul>
+					{closures.map((c) => (
+						<li>
+							<strong>{c.label}</strong>{' '}
+							{fmtDate(c.startsOn)}{c.endsOn !== c.startsOn && `–${fmtDate(c.endsOn)}`}
+							{c.closed ? ' · Closed' : ` · ${c.opens}–${c.closes}`}
+						</li>
+					))}
+				</ul>
+			</div>
+		)}
+	</section>
+	</div>
+)}
