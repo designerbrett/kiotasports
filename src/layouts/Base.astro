@@ -21,16 +21,6 @@ const { title, bodyClass } = Astro.props;
 	<link rel="stylesheet" type="text/css" href="/slick/slick-theme.css">
 	<link rel="stylesheet" href="/style.css">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=UA-157827215-1"></script>
-	<script is:inline>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-157827215-1');
-	</script>
-
 	<script is:inline defer src="https://app.practicelobby.com/api/t.js"></script>
 </head>
 <body class={bodyClass}>
@@ -63,9 +53,10 @@ const { title, bodyClass } = Astro.props;
 	</div>
 </footer>
 
-<script is:inline type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script is:inline type="text/javascript" src="/slick/slick.min.js"></script>
 <slot name="scripts" />
+{import.meta.env.PROD && <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c71827bb43034118bb15471623fa050c"}'></script>}
 
 </body>
 </html>
