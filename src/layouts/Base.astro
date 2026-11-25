@@ -27,7 +27,7 @@ const { title, bodyClass } = Astro.props;
 
 <header>
 	<div class="container">
-		<a class="logo" href="/"><img src="/images/logo.png" height="60" alt="kiota logo of a bird landing on a nest"></a>
+		<a class="logo" href="/"><img src="/images/logo.png" height="60" alt="Kiota Sports Academy home"></a>
 		<div class="menu-links">
 			<a class="about" href="/about">About</a>
 			<a class="video" target="_blank" href="https://www.facebook.com/pg/kiotasportsacademy/videos">Videos</a>
@@ -41,13 +41,15 @@ const { title, bodyClass } = Astro.props;
 	</div>
 </header>
 
+<main>
 <slot />
+</main>
 
 <footer>
 	<div class="container">
 		<ul class="social">
-			<li><a target="_blank" href="https://www.instagram.com/kiotasports/"><img height="24px" src="/images/instagram.png"></a></li>
-			<li><a target="_blank" href="https://www.facebook.com/kiotasportsacademy/"><img height="24px" src="/images/facebook.png"></a></li>
+			<li><a target="_blank" href="https://www.instagram.com/kiotasports/" aria-label="Kiota Sports Academy on Instagram"><img height="24" src="/images/instagram.png" alt=""></a></li>
+			<li><a target="_blank" href="https://www.facebook.com/kiotasportsacademy/" aria-label="Kiota Sports Academy on Facebook"><img height="24" src="/images/facebook.png" alt=""></a></li>
 		</ul>
 		<p>Copyright &copy; {new Date().getFullYear()} Kiota Sports Academy. All Rights Reserved.</p>
 	</div>

@@ -2,6 +2,20 @@
 import Base from '../layouts/Base.astro';
 import HubContent from '../components/HubContent.astro';
 
+const photos = {
+	'carousel-01.jpg': 'Kiota futsal team in green kits posing on an indoor court',
+	'carousel-02.jpg': 'Futsal squads lined up together at a super league event',
+	'carousel-03.jpg': 'Young players in yellow Kiota bibs holding basketballs and hula hoops',
+	'carousel-04.png': 'Coach in an orange bib with young players on an outdoor pitch',
+	'carousel-05.png': 'Children in swim rings learning to swim in a pool',
+	'carousel-06.png': 'Young player kicking a ball during a training drill',
+	'carousel-07.jpg': 'Large group of Kiota players and coaches outdoors',
+	'carousel-08.png': 'Children sitting in a circle on the pitch during a training session',
+	'carousel-09.png': 'Young player in a yellow kit dribbling a ball',
+	'carousel-10.png': 'Small child in a Kiota shirt raising a fist in celebration',
+	'carousel-11.png': 'Team in green kits with coaches after a match',
+	'carousel-12.png': 'Older players in black Kiota kits lined up on the field',
+};
 const carousel = [
 	'carousel-11.png', 'carousel-12.png', 'carousel-01.jpg', 'carousel-02.jpg', 'carousel-03.jpg',
 	'carousel-04.png', 'carousel-05.png', 'carousel-06.png', 'carousel-07.jpg', 'carousel-08.png',
@@ -14,7 +28,7 @@ const carousel = [
 		<div class="hero-content">
 			<h1>Welcome to Kiota Sports Academy</h1>
 			<p>Nurturing talent and character. Providing professional and structured talent development in Africa.</p>
-			<h4>Activities</h4>
+			<h2>Activities</h2>
 			<p>Soccer, Swimming, Badminton, and Basketball</p>
 			<a class="button" target="_blank" href="https://forms.gle/bKkH27nKgSyK9Ujs6" data-pl-track="booking">Fill out registration form</a>
 		</div>
@@ -23,7 +37,7 @@ const carousel = [
 	<section class="carousel-section">
 		<div class="row">
 			<div class="carousel">
-				{carousel.map((src) => <div><img src={`/images/${src}`}></div>)}
+				{carousel.map((src) => <div><img src={`/images/${src}`} alt={photos[src]}></div>)}
 			</div>
 		</div>
 	</section>

@@ -224,24 +224,29 @@ h2 {
 		line-height: 28px;
 	}
 }
-h3 {
+h3,
+.bio .content h1 {
 	font-size: 30px;
 	line-height: 28px;
 }
 @media (max-width: 550px) {
-	h3 {
+	h3,
+	.bio .content h1 {
 		font-size: 24px;
 		line-height: 28px;
 	}
 }
 
-h4 {
+h4,
+.hero-content h2 {
 	font-size: 24px;
 	line-height: 26px;
+	margin-top: 1.33em;
 	margin-bottom: 0;
 }
 @media (max-width: 550px) {
-	h4 {
+	h4,
+	.hero-content h2 {
 		font-size: 20px;
 		line-height: 24px;
 	}
@@ -251,7 +256,7 @@ button,
 .button {
 	text-decoration: none;
 	font-family: 'Teko', 'Helvetica', 'Arial', sans-serif;
-	background: #F58320;
+	background: #B35A0E;
 	color: #FFF;
 	font-size: 20px;
 	line-height: 26px;
@@ -261,7 +266,7 @@ button,
 }
 button:hover,
 .button:hover {
-	background: #DB751D;
+	background: #9E4F0C;
 }
 
 /* Slideshow
@@ -333,7 +338,7 @@ footer {
 	font-size: 14px;
 	padding: 16px 0;
 	margin-top: 24px;
-	color: #777777;
+	color: #6B6B6B;
 }
 footer .social {
 	margin: 0;
